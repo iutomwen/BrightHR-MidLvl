@@ -11,7 +11,9 @@ const Home = () => {
   useEffect(() => {
     // Sort files based on the selected input
     const sortedFiles = [...files].sort((a, b) => {
+      // @ts-ignore: Unreachable code error
       if (a[sortOption] < b[sortOption]) return -1;
+      // @ts-ignore: Unreachable code error
       if (a[sortOption] > b[sortOption]) return 1;
       return 0;
     });
